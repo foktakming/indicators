@@ -84,7 +84,7 @@ class AverageTrueRange(object):
                 atr_value = np.average(tr[index - days:index])
             else:
                 # 取最新的TR值计算ATR
-                atr_value = (tr[index - 1] + atr_list[-1] * 13) / days
+                atr_value = (tr[index - 1] + atr_list[-1] * (days-1)) / days
 
             atr_list.append(atr_value)
 
