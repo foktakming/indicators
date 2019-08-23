@@ -102,10 +102,8 @@ class RelativeStrengthIndex(object):
         for index in range(len(self.data_set)):
 
             if index < days:
-                print(index)
                 ave_gain = np.nan
             elif index == days:
-                print(index)
                 # 第一天为nan，所以退后一格
                 ave_gain = np.mean(gain[index - days + 1:index + 1])
             else:
