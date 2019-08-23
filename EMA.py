@@ -60,7 +60,7 @@ class ExponentialMovingAverage(object):
             elif index == days - 1:
                 ema = simple_mean[index]
             else:
-                ema = (close[index - 1] - ema_list[-1]) * multi + ema_list[-1]
+                ema = (close[index] - ema_list[-1]) * multi + ema_list[-1]
 
             ema_list.append(ema)
 
